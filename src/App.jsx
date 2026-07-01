@@ -13,6 +13,7 @@ const App = () => {
       <Router>
         <div className="min-h-screen bg-gray-950 font-sans text-gray-100">
           <Navbar/>
+          <Cuisines/>
           <Routes>
             <Route />
           </Routes>
