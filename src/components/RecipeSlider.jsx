@@ -2,7 +2,7 @@ import { useFetch } from "./useFetch.js";
 import RecipeCard from "./RecipeCard.jsx";
 import SliderImport from "react-slick";
 const Slider = SliderImport.default;
-import {Clock} from "lucide-react"
+import {Clock, Loader} from "lucide-react"
 const RecipeSlider = ({title, fetchUrl}) => {
   const {data, loading, error}= useFetch(fetchUrl)
   console.log(data?.meals);
@@ -19,6 +19,12 @@ const RecipeSlider = ({title, fetchUrl}) => {
     autoplaySpeed: 2000,
     cssEase: "linear",
   };
+  if(loading) return (<div className="text-center p-8 text-gray-300">
+    <Loader className="animate-spin inline-block mr-2 text-blue-400"/>
+    Loading {title}...
+  </div>);
+   
+  
   return (
     <>
       <section className="mt-2 mx-auto">

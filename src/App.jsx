@@ -12,10 +12,11 @@ const App = () => {
     <>
       <Router>
         <div className="min-h-screen bg-gray-950 font-sans text-gray-100">
-          <Navbar/>
-          <Cuisines/>
+          <Navbar />
+          <Cuisines />
           <Routes>
-            <Route path="/" element={<HomeView/>}/>
+            <Route path="/" element={<HomeView />} />
+            <Route path="/recipe/:id" element={<RecipeDetailView />} />
           </Routes>
         </div>
       </Router>
