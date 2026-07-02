@@ -1,12 +1,12 @@
 import { useState, useEffect } from "react";
 export const API_URL = "https://www.themealdb.com/api/json/v1/1/";
-const useFetch = (url) => {
+export const useFetch = (url) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     useEffect(() => {
       if(!url){
-        async ()=>{setLoading(false);}
+        setLoading(false);
         return;
       }
       const fetchData = async ()=>{
@@ -30,4 +30,4 @@ const useFetch = (url) => {
   
 }
 
-export default useFetch
+
