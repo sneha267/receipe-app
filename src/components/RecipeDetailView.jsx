@@ -6,17 +6,17 @@ const RecipeDetailView = () => {
   const { id } = useParams();
   const { data, loading, error } = useFetch(`${API_URL}/lookup.php?i=${id}`);
   const meal = data?.meals[0]?.[0];
-  const ingredients=[];
-  for(let i=1; i<=20; i++){
-    const ingredient = meal[`strIngredient${i}`]
-    const measure = meal[`strMeasure${i}`];
-    if(ingredient && ingredient.trim()){
-      ingredients.push({
-        ingredient:ingredient.trim(), 
-        measure:measure ? measure.trim():""
-      })
-    }
-  }
+  // const ingredients=[];
+  // for(let i=1; i<=20; i++){
+  //   const ingredient = meal[`strIngredient${i}`]
+  //   const measure = meal[`strMeasure${i}`];
+  //   if(ingredient && ingredient.trim()){
+  //     ingredients.push({
+  //       ingredient:ingredient.trim(), 
+  //       measure:measure ? measure.trim():""
+  //     })
+  //   }
+  // }
   if (loading)
     return (
       <div className="text-center p-8 text-gray-300">
