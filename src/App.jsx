@@ -15,7 +15,7 @@ const App = () => {
           <Navbar/>
           <Cuisines/>
           <Routes>
-            <Route />
+            <Route path="/" element={<HomeView/>}/>
           </Routes>
         </div>
       </Router>
