@@ -2,7 +2,7 @@
 import TrendingRecipe from "./TrendingRecipe.jsx";
 import RecipeSlider from './RecipeSlider.jsx';
 import CategorySelection from './CategorySelection.jsx';
-import {API_URL} from "./usefetch.js"
+import {API_URL} from "./useFetch.js"
 const HomeView = ({filterByCategory}) => {
   return (
     <>
