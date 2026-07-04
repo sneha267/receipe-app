@@ -1,5 +1,5 @@
 import { useFetch } from "./useFetch.js";
-import RecipeCard from "./RecipeCard.jsx";
+//import RecipeCard from "./RecipeCard.jsx";
 import SliderImport from "react-slick";
 const Slider = SliderImport.default;
 import {Link} from "react-router-dom"

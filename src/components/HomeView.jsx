@@ -3,7 +3,7 @@ import TrendingRecipe from "./TrendingRecipe.jsx";
 import RecipeSlider from './RecipeSlider.jsx';
 import CategorySelection from './CategorySelection.jsx';
 import {API_URL} from "./usefetch.js"
-const HomeView = () => {
+const HomeView = ({filterByCategory}) => {
   return (
     <>
       <main className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -15,7 +15,7 @@ const HomeView = () => {
           title="Quick & Easy Meal"
           fetchUrl={`${API_URL}filter.php?a=Canadian`}
         />
-        <CategorySelection />
+        <CategorySelection filterByCategory={filterByCategory}/>
       </main>
     </>
   );
